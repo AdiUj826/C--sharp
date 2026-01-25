@@ -1,9 +1,16 @@
 ﻿using System;
-
-public class program
+namespace console3
 {
-    static void Main(string[] args)
+    public class Program
     {
+        static void Main(string[] args)
 
+        {
+           
+
+
+        }
     }
 }
+ 
+
