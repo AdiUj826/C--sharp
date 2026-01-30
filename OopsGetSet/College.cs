@@ -2,33 +2,29 @@ using System;
 
 class College
 {
-    private string name;
-    private string location;
-    private int collegeCode;
+    string name;
+    string location;
+    int code;
 
-    public string Name
+    public College()
     {
-        get { return name; }
-        set { name = value; }
+        name = "NA";
+        location = "NA";
+        code = 0;
     }
 
-    public string Location
+    public College(string n, string l, int c)
     {
-        get { return location; }
-        set { location = value; }
-    }
-
-    public int CollegeCode
-    {
-        get { return collegeCode; }
-        set { collegeCode = value; }
+        name = n;
+        location = l;
+        code = c;
     }
 
     public void PrintInfo()
     {
-        Console.WriteLine(Name);
-        Console.WriteLine(Location);
-        Console.WriteLine(CollegeCode);
+        Console.WriteLine(name);
+        Console.WriteLine(location);
+        Console.WriteLine(code);
     }
 }
 
@@ -36,10 +32,7 @@ class Program
 {
     static void Main()
     {
-        College c = new College();
-        c.Name = "ABC College";
-        c.Location = "Delhi";
-        c.CollegeCode = 1234;
+        College c = new College("ABC College", "Delhi", 1234);
         c.PrintInfo();
     }
 }
