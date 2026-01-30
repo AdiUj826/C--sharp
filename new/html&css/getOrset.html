@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- <h1 id="head">Hii I'm Message</h1>
+    <p id="para"></p>-->
+    <button onclick="createlink()">click me</button>
+<h1 id="link"></h1> 
+<h2 id="name"></h2>
+<a  id="ancher"  hre f=""></a>
+
+    <script>
+        // let h1Tag = document.getElementById('head')
+        // let pTag = document.getElementById('para')
+
+        // pTag.innerText = "Hiii 😂" + h1Tag.innerText
+        // pTag.title="----------------------------------------------"
+        // console.log(h1Tag.innerText)
+            
+       let  h1Tag = document.getElementById('link') 
+        let  h2Tag = document.getElementById('name')
+        let aTag = document.getElementById('ancher')
+        function createlink(){
+             aTag.href = h1Tag.innerText
+             aTag.href = h2Tag.innerText
+           
+        }
+    </script>
+</body>
+
+</html>
