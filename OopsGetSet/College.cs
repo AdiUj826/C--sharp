@@ -1,34 +1,34 @@
 using System;
 
-class Person
+class College
 {
-    private string fullName;
-    private int age;
-    private string phone;
+    private string name;
+    private string location;
+    private int collegeCode;
 
-    public string FullName
+    public string Name
     {
-        get { return fullName; }
-        set { fullName = value; }
+        get { return name; }
+        set { name = value; }
     }
 
-    public int Age
+    public string Location
     {
-        get { return age; }
-        set { age = value; }
+        get { return location; }
+        set { location = value; }
     }
 
-    public string Phone
+    public int CollegeCode
     {
-        get { return phone; }
-        set { phone = value; }
+        get { return collegeCode; }
+        set { collegeCode = value; }
     }
 
     public void PrintInfo()
     {
-        Console.WriteLine(FullName);
-        Console.WriteLine(Age);
-        Console.WriteLine(Phone);
+        Console.WriteLine(Name);
+        Console.WriteLine(Location);
+        Console.WriteLine(CollegeCode);
     }
 }
 
@@ -36,10 +36,10 @@ class Program
 {
     static void Main()
     {
-        Person p = new Person();
-        p.FullName = "Yogesh";
-        p.Age = 24;
-        p.Phone = "9699282032";
-        p.PrintInfo();
+        College c = new College();
+        c.Name = "ABC College";
+        c.Location = "Delhi";
+        c.CollegeCode = 1234;
+        c.PrintInfo();
     }
 }
