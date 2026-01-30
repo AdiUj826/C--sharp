@@ -2,33 +2,29 @@ using System;
 
 class Person
 {
-    private string fullName;
-    private int age;
-    private string phone;
+    string fullName;
+    int age;
+    string phone;
 
-    public string FullName
+    public Person()
     {
-        get { return fullName; }
-        set { fullName = value; }
+        fullName = "NA";
+        age = 0;
+        phone = "Not Given";
     }
 
-    public int Age
+    public Person(string name, int a, string p)
     {
-        get { return age; }
-        set { age = value; }
-    }
-
-    public string Phone
-    {
-        get { return phone; }
-        set { phone = value; }
+        fullName = name;
+        age = a;
+        phone = p;
     }
 
     public void PrintInfo()
     {
-        Console.WriteLine(FullName);
-        Console.WriteLine(Age);
-        Console.WriteLine(Phone);
+        Console.WriteLine(fullName);
+        Console.WriteLine(age);
+        Console.WriteLine(phone);
     }
 }
 
@@ -36,10 +32,7 @@ class Program
 {
     static void Main()
     {
-        Person p = new Person();
-        p.FullName = "Yogesh";
-        p.Age = 24;
-        p.Phone = "9699282032";
+        Person p = new Person("Yogesh", 24, "9699282032");
         p.PrintInfo();
     }
 }
