@@ -2,29 +2,33 @@ using System;
 
 class Student
 {
-    string name;
-    int age;
-    int rollNo;
+    private string studentName;
+    private int studentAge;
+    private int rollNumber;
 
-    public Student()
+    public string StudentName
     {
-        name = "NA";
-        age = 0;
-        rollNo = 0;
+        get { return studentName; }
+        set { studentName = value; }
     }
 
-    public Student(string n, int a, int r)
+    public int StudentAge
     {
-        name = n;
-        age = a;
-        rollNo = r;
+        get { return studentAge; }
+        set { studentAge = value; }
+    }
+
+    public int RollNumber
+    {
+        get { return rollNumber; }
+        set { rollNumber = value; }
     }
 
     public void PrintInfo()
     {
-        Console.WriteLine(name);
-        Console.WriteLine(age);
-        Console.WriteLine(rollNo);
+        Console.WriteLine(StudentName);
+        Console.WriteLine(StudentAge);
+        Console.WriteLine(RollNumber);
     }
 }
 
@@ -32,9 +36,10 @@ class Program
 {
     static void Main()
     {
-        Student s = new Student("Rahul", 20, 101);
+        Student s = new Student();
+        s.StudentName = "Rahul";
+        s.StudentAge = 20;
+        s.RollNumber = 101;
         s.PrintInfo();
     }
 }
-
-
