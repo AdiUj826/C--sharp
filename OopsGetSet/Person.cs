@@ -25,6 +25,7 @@ class Person
         Console.WriteLine(fullName);
         Console.WriteLine(age);
         Console.WriteLine(phone);
+        Console.WriteLine("-----------");
     }
 }
 
@@ -32,7 +33,10 @@ class Program
 {
     static void Main()
     {
-        Person p = new Person("Yogesh", 24, "9699282032");
-        p.PrintInfo();
+        Person p1 = new Person();
+        p1.PrintInfo();
+
+        Person p2 = new Person("Yogesh", 24, "9699282032");
+        p2.PrintInfo();
     }
 }
