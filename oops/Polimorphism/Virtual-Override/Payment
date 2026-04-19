@@ -1,0 +1,43 @@
+using System;
+
+class Payment
+{
+    public virtual void Pay()
+    {
+        Console.WriteLine("Making payment...");
+    }
+}
+class UPI : Payment
+{
+    public override void Pay()
+    {
+        Console.WriteLine("Paying by UPI!");
+    }
+}
+class CreditCard : Payment
+{
+    public override void Pay()
+    {
+        Console.WriteLine("Paying by Credit Card!");
+    }
+}
+class Cash : Payment
+{
+    public override void Pay()
+    {
+        Console.WriteLine("Paying by Cash!");
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Payment p1 = new UPI();
+        Payment p2 = new CreditCard();
+        Payment p3 = new Cash();
+
+        p1.Pay();
+        p2.Pay();
+        p3.Pay();
+    }
+}

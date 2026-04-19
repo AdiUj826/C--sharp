@@ -1,0 +1,32 @@
+using System;
+
+class Bank
+{
+    public void Deposit(int amount)
+    {
+        Console.WriteLine("Deposited: " + amount);
+    }
+    public void Deposit(int amount, string accountType)
+    {
+        Console.WriteLine("Deposited: " + amount);
+        Console.WriteLine("Account Type: " + accountType);
+    }
+    public void Deposit(int amount, string accountType, string name)
+    {
+        Console.WriteLine("Deposited: " + amount);
+        Console.WriteLine("Account Type: " + accountType);
+        Console.WriteLine("Name: " + name);
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Bank b = new Bank();
+        b.Deposit(1000);
+        Console.WriteLine("-------------------");
+        b.Deposit(2000, "Savings");
+        Console.WriteLine("-------------------");
+        b.Deposit(3000, "Current", "Ram");
+    }
+}

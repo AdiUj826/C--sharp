@@ -1,0 +1,56 @@
+using System;
+
+abstract class Employee
+{
+    public string Name;
+
+    public abstract void Work();
+
+    public void Salary()
+    {
+        Console.WriteLine(Name + " gets salary!");
+    }
+}
+class Developer : Employee
+{
+    public override void Work()
+    {
+        Console.WriteLine("Developer writes code!");
+    }
+}
+class Designer : Employee
+{
+    public override void Work()
+    {
+        Console.WriteLine("Designer makes UI!");
+    }
+}
+class Manager : Employee
+{
+    public override void Work()
+    {
+        Console.WriteLine("Manager manages team!");
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Developer d = new Developer();
+        d.Name = "Ram";
+        d.Work();
+        d.Salary();
+        Console.WriteLine("-------------------");
+
+        Designer des = new Designer();
+        des.Name = "Shyam";
+        des.Work();
+        des.Salary();
+        Console.WriteLine("-------------------");
+
+        Manager m = new Manager();
+        m.Name = "Laxman";
+        m.Work();
+        m.Salary();
+    }
+}

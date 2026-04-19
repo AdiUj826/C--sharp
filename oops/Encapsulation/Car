@@ -1,0 +1,32 @@
+using System;
+class Car
+{
+    private string model;
+    private int speed;
+
+    public string Model
+    {
+        get { return model; }
+        set { model = value; }
+    }
+    public int Speed
+    {
+        get { return speed; }
+        set { speed = value; }
+    }
+    public void Display()
+    {
+        Console.WriteLine("Model: " + Model);
+        Console.WriteLine("Speed: " + Speed);
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Car c = new Car();
+        c.Model = "BMW";
+        c.Speed = 200;
+        c.Display();
+    }
+}

@@ -1,0 +1,32 @@
+using System;
+
+class Hotel
+{
+    public void Order(string item)
+    {
+        Console.WriteLine("Ordered: " + item);
+    }
+    public void Order(string item, int quantity)
+    {
+        Console.WriteLine("Ordered: " + item);
+        Console.WriteLine("Quantity: " + quantity);
+    }
+    public void Order(string item, int quantity, string size)
+    {
+        Console.WriteLine("Ordered: " + item);
+        Console.WriteLine("Quantity: " + quantity);
+        Console.WriteLine("Size: " + size);
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Hotel h = new Hotel();
+        h.Order("Pizza");
+        Console.WriteLine("-------------------");
+        h.Order("Burger", 2);
+        Console.WriteLine("-------------------");
+        h.Order("Pasta", 3, "Large");
+    }
+}

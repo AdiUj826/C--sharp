@@ -1,0 +1,32 @@
+using System;
+class Mobile
+{
+    private string brand;
+    private int price;
+
+    public string Brand
+    {
+        get { return brand; }
+        set { brand = value; }
+    }
+    public int Price
+    {
+        get { return price; }
+        set { price = value; }
+    }
+    public void Display()
+    {
+        Console.WriteLine("Brand: " + Brand);
+        Console.WriteLine("Price: " + Price);
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Mobile m = new Mobile();
+        m.Brand = "Samsung";
+        m.Price = 20000;
+        m.Display();
+    }
+}

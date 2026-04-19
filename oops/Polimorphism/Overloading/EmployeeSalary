@@ -1,0 +1,33 @@
+using System;
+
+class Employee
+{
+    public void Salary(string name)
+    {
+        Console.WriteLine("Name: " + name);
+    }
+    public void Salary(string name, decimal basic)
+    {
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("Basic: " + basic);
+    }
+    public void Salary(string name, decimal basic, decimal bonus)
+    {
+        Console.WriteLine("Name: " + name);
+        Console.WriteLine("Basic: " + basic);
+        Console.WriteLine("Bonus: " + bonus);
+        Console.WriteLine("Total: " + (basic + bonus));
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Employee e = new Employee();
+        e.Salary("Ram");
+        Console.WriteLine("-------------------");
+        e.Salary("Shyam", 20000);
+        Console.WriteLine("-------------------");
+        e.Salary("Laxman", 30000, 5000);
+    }
+}

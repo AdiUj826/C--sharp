@@ -1,0 +1,43 @@
+using System;
+
+class Vehicle
+{
+    public virtual void Start()
+    {
+        Console.WriteLine("Vehicle is starting");
+    }
+}
+class Bike : Vehicle
+{
+    public override void Start()
+    {
+        Console.WriteLine("Bike is starting: Vroom!");
+    }
+}
+class Car : Vehicle
+{
+    public override void Start()
+    {
+        Console.WriteLine("Car is starting: Beep Beep!");
+    }
+}
+class Truck : Vehicle
+{
+    public override void Start()
+    {
+        Console.WriteLine("Truck is starting: Horn!");
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Vehicle v1 = new Bike();
+        Vehicle v2 = new Car();
+        Vehicle v3 = new Truck();
+
+        v1.Start();
+        v2.Start();
+        v3.Start();
+    }
+}

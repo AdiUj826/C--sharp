@@ -1,0 +1,31 @@
+using System;
+
+class Calculator
+{
+    public int Add(int a, int b)
+    {
+        return a + b;
+    }
+
+    public int Add(int a, int b, int c)
+    {
+        return a + b + c;
+    }
+
+    public double Add(double a, double b)
+    {
+        return a + b;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Calculator calc = new Calculator();
+
+        Console.WriteLine("2 numbers: " + calc.Add(10, 20));
+        Console.WriteLine("3 numbers: " + calc.Add(10, 20, 30));
+        Console.WriteLine("Double: " + calc.Add(10.5, 20.5));
+    }
+}

@@ -1,0 +1,43 @@
+using System;
+
+class Food
+{
+    public virtual void Order()
+    {
+        Console.WriteLine("Ordering food...");
+    }
+}
+class Pizza : Food
+{
+    public override void Order()
+    {
+        Console.WriteLine("Ordered: Pizza!");
+    }
+}
+class Burger : Food
+{
+    public override void Order()
+    {
+        Console.WriteLine("Ordered: Burger!");
+    }
+}
+class Pasta : Food
+{
+    public override void Order()
+    {
+        Console.WriteLine("Ordered: Pasta!");
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Food f1 = new Pizza();
+        Food f2 = new Burger();
+        Food f3 = new Pasta();
+
+        f1.Order();
+        f2.Order();
+        f3.Order();
+    }
+}

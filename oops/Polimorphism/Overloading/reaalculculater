@@ -1,0 +1,27 @@
+using System;
+
+class Area
+{
+    public double Calculate(double side)
+    {
+        return side * side;
+    }
+    public double Calculate(double length, double width)
+    {
+        return length * width;
+    }
+    public double Calculate(double baseVal, double height, bool triangle)
+    {
+        return 0.5 * baseVal * height;
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Area a = new Area();
+        Console.WriteLine("Square Area: " + a.Calculate(5));
+        Console.WriteLine("Rectangle Area: " + a.Calculate(5, 10));
+        Console.WriteLine("Triangle Area: " + a.Calculate(5, 10, true));
+    }
+}

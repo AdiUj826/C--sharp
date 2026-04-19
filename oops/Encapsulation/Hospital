@@ -1,0 +1,40 @@
+using System;
+class Patient
+{
+    private string name;
+    private int age;
+    private string disease;
+
+    public string Name
+    {
+        get { return name; }
+        set { name = value; }
+    }
+    public int Age
+    {
+        get { return age; }
+        set { age = value; }
+    }
+    public string Disease
+    {
+        get { return disease; }
+        set { disease = value; }
+    }
+    public void Display()
+    {
+        Console.WriteLine("Name: " + Name);
+        Console.WriteLine("Age: " + Age);
+        Console.WriteLine("Disease: " + Disease);
+    }
+}
+class Program
+{
+    static void Main(string[] args)
+    {
+        Patient p = new Patient();
+        p.Name = "Suresh";
+        p.Age = 45;
+        p.Disease = "Fever";
+        p.Display();
+    }
+}
